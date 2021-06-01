@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package device;
+
+service Devices {
+    // 获取设备列表
+    rpc List(Request) returns (Response) {}
+    // 获取单条设备信息
+    rpc Get(Request) returns (Response) {}
+    // 创建或更新商品设备信息
+    rpc Create(Request) returns (Response) {}
+    // 更新数据
+    rpc Update(Request) returns (Response) {}
+    // 删除商品设备信息
+    rpc Delete(Request) returns (Response) {}
+    // 微服务之间调用
+}
+
+message Device {
+    int64 id = 1;                   // 编码
+    string code = 2;                // 编码
+    int64 status = 3;               // 状态  
+    string config = 4;              // 配置
+    string info = 5;                // 设备信息 设备唯一识别标识可以是MAC地址
+    string user_id = 6;             // 设备用户ID
+    string created_at = 7;
+    string updated_at = 8;
+}
+
+message ListQuery{
+    int64 limit=1;          // 返回数量
+    int64 page=2;           // 页面
+    string sort=3;          // 排序
+    string where = 4;       // 查询条件
+}
+
+message Request {
+    ListQuery list_query = 1;           // 列表分页请求
+    Device device = 2;            // 商品设备信息
+}
+
+message Response {
+    bool valid = 1;
+    int64 total = 2;// 汇总总额
+    Device device = 3;
+    repeated Device devices = 4;
+}
