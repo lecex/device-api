@@ -6,7 +6,13 @@ git:
 .PHONY: tag
 tag:
 	git push --tags
-.PHONY: micro
+	
+.PHONY: rpc
+rpc:
+	micro api  --handler=rpc  --namespace=go.micro.api --address=:8080
+.PHONY: api
+api:
+	micro api  --handler=api  --namespace=go.micro.api --address=:8081
 micro:
 	micro api --enable_rpc=true
 
