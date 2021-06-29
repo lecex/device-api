@@ -27,5 +27,12 @@ var Conf config.Config = config.Config{
 		{Service: "device-api", Method: "device.Update", Auth: true, Policy: true, Name: "更新设备", Description: "更新设备信息。"},
 		{Service: "device-api", Method: "device.Get", Auth: true, Policy: true, Name: "查询设备", Description: "查询设备信息权限。"},
 		{Service: "device-api", Method: "device.List", Auth: true, Policy: true, Name: "设备列表", Description: "查询设备列表"},
+		// 收银员
+		{Service: "device-api", Method: "cashier.Create", Auth: true, Policy: true, Name: "创建收银员", Description: "创建新收银员权限。"},
+		{Service: "device-api", Method: "cashier.Delete", Auth: true, Policy: true, Name: "删除收银员", Description: "删除收银员。"},
+		{Service: "device-api", Method: "device.Update", Auth: true, Policy: true, Name: "更新收银员", Description: "更新收银员信息。"},
+		{Service: "device-api", Method: "cashier.Get", Auth: true, Policy: true, Name: "查询收银员", Description: "查询收银员权限。"},
+		{Service: "device-api", Method: "cashier.List", Auth: true, Policy: true, Name: "收银员列表", Description: "查询收银员列表"},
+		{Service: "device-api", Method: "cashier.All", Auth: true, Policy: true, Name: "收银员列表", Description: "查询收银员列表"},
 	},
 }
