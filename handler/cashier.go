@@ -5,7 +5,7 @@ import (
 
 	client "github.com/lecex/core/client"
 
-	pb "github.com/lecex/cashier-api/proto/cashier"
+	pb "github.com/lecex/device-api/proto/cashier"
 )
 
 // Cashier 设备结构

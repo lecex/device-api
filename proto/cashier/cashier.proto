@@ -1,5 +1,5 @@
 syntax = "proto3";
-
+// 收银员
 package cashier;
 
 service Cashiers {
