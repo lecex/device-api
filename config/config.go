@@ -15,7 +15,7 @@ import (
 //	Description // 权限解释
 var Conf config.Config = config.Config{
 	Name:    env.Getenv("MICRO_API_NAMESPACE", "go.micro.api.") + "device-api",
-	Version: "v1.0.3",
+	Version: "v1.0.6",
 	Service: map[string]string{
 		"device": env.Getenv("DEVICE_SERVICE", "go.micro.srv.device"),
 		"user":   env.Getenv("USER_SERVICE", "go.micro.srv.user"),
